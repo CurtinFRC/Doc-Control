@@ -21,8 +21,8 @@ export default defineConfig({
 					],
 				},
 				{
-					label: 'Documentation',
-					autogenerate: { directory: 'documentation' },
+					label: 'Reference',
+					autogenerate: { directory: 'reference' },
 				},
         // {
         //   label: 'Setting Up Your Own Project',
