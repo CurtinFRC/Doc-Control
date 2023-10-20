@@ -18,6 +18,7 @@ export default defineConfig({
 					items: [
 						// Each item here is one entry in the navigation menu.
 						{ label: 'Behaviours', link: '/guides/behaviours/' },
+						{ label: 'Style Guide', link: '/guides/style/' },
 					],
 				},
 				{
