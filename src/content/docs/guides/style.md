@@ -121,3 +121,20 @@ root
 ```
 This is designed to correspond with our namespacing and make everything easy to find.
 
+## Functions
+```cpp
+void bob() {
+  // code here
+}
+```
+Notice how the open curly brace is on the same line?
+This is a requirement.
+Any functions which are written like so
+```cpp
+void bob
+{
+  // code here
+}
+```
+will not be accepted.
+
