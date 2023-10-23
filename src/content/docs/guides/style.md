@@ -123,7 +123,7 @@ This is designed to correspond with our namespacing and make everything easy to 
 
 ## Functions
 ```cpp
-void bob() {
+void Bob() {
   // code here
 }
 ```
@@ -131,7 +131,52 @@ Notice how the open curly brace is on the same line?
 This is a requirement.
 Any functions which are written like so
 ```cpp
-void bob
+void Bob
+{
+  // code here
+}
+```
+will not be accepted.
+
+## Classes
+```cpp
+class Bob {
+  // code here
+}
+```
+Similar to functions this is how classes should be declared
+```cpp
+class Bob
+{
+  // code here
+}
+```
+will not be accepted.
+
+## Enums
+```cpp
+enum Bob {
+  // code here
+}
+```
+Similar to functions this is how enums should be declared
+```cpp
+enum Bob
+{
+  // code here
+}
+```
+will not be accepted.
+
+## Structs
+```cpp
+struct Bob {
+  // code here
+}
+```
+Similar to functions this is how structs should be declared
+```cpp
+struct Bob
 {
   // code here
 }
