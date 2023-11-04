@@ -18,11 +18,12 @@ export default defineConfig({
 					items: [
 						// Each item here is one entry in the navigation menu.
 						{ label: 'Behaviours', link: '/guides/behaviours/' },
+						{ label: 'Style Guide', link: '/guides/style/' },
 					],
 				},
 				{
-					label: 'Documentation',
-					autogenerate: { directory: 'documentation' },
+					label: 'Reference',
+					autogenerate: { directory: 'reference' },
 				},
         // {
         //   label: 'Setting Up Your Own Project',

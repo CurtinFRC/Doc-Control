@@ -1,0 +1,52 @@
+name: Build Checks 
+
+on:
+  push:
+    branches: [ "*" ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+  Ubuntu:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - uses: pnpm/action-setup@v2.4.0
+      with:
+        version: latest
+    - name: Install
+      run: pnpm install
+    - name: Build
+      run: pnpm build
+
+  Windows:
+
+    runs-on: windows-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - uses: pnpm/action-setup@v2.4.0
+      with:
+        version: latest        
+    - name: Install
+      run: pnpm install
+    - name: Build
+      run: pnpm build
+
+  Mac:
+
+    runs-on: macos-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - uses: pnpm/action-setup@v2.4.0
+      with:
+        version: latest
+    - name: Install
+      run: pnpm install
+    - name: Build
+      run: pnpm build
+
+
