@@ -10,8 +10,6 @@ The path planner is used to calculate trajectory from WPILibs pathweaver.
 You can use it by creating an instance of the path planner class using this code:
 
 ```cpp
-#include "utils/PathPlanner.h"
-
 PathPlanner pathPlanner;
 ```
 
