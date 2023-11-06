@@ -7,7 +7,7 @@ This is a collection of utility functions that do not fit in one of the other ca
 
 ## Usage
 
-### `now()`
+### now()
 
 Returns the current time in seconds since the program started.
 
@@ -17,7 +17,7 @@ Returns the current time in seconds since the program started.
 units::second_t time = now();
 ```
 
-### `WritePose2NT`
+### WritePose2NT
 
 Writes a Pose2d to a NetworkTable.
 
@@ -26,7 +26,7 @@ Writes a Pose2d to a NetworkTable.
 WritePose2NT(table, pose);
 ```
 
-### `WritePose3NT`
+### WritePose3NT
 
 Writes a Pose3d to a NetworkTable.
 
@@ -35,7 +35,7 @@ Writes a Pose3d to a NetworkTable.
 WritePose3NT(table, pose);
 ```
 
-### `deadzone`
+### deadzone
 
 Returns 0 if the value is within the deadzone, otherwise returns the value.
 
@@ -44,7 +44,7 @@ Returns 0 if the value is within the deadzone, otherwise returns the value.
 double val = deadzone(0.1, 0.05);
 ```
 
-### `spow2`
+### spow2
 
 Returns the square of the value.
 
