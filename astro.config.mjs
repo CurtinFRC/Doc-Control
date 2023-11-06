@@ -14,6 +14,10 @@ export default defineConfig({
 			},
 			sidebar: [
 				{
+					label: 'Setup',
+					autogenerate: { directory: 'setup' },
+				},
+				{
 					label: 'Guides',
 					items: [
 						// Each item here is one entry in the navigation menu.
@@ -25,10 +29,7 @@ export default defineConfig({
 					label: 'Reference',
 					autogenerate: { directory: 'reference' },
 				},
-        // {
-        //   label: 'Setting Up Your Own Project',
-        //   autogenerate: { directory: 'setup' },
-        // },
+
 			],
 		}),
 	],
