@@ -7,8 +7,6 @@ sidebar:
 
 **Make sure you have the [wombat CLI](wombat-cli) installed before continuing.**
 
-## Create a project
-
 To create a project run the following command in a terminal (**make sure you are in the directory you want to create the project in**):
 
 ```bash
