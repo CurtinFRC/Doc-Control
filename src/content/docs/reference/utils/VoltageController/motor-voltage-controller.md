@@ -4,7 +4,7 @@ description: 'Motor voltage controller for the robot'
 ---
 The MotorVoltageController is an adapter for an `frc::MotorController` to a VoltageController.
 
-**See also: [Voltage Controller](../voltage-controller)**
+**See also: [Voltage Controller](../../voltagecontroller)**
 
 ## Usage
 
@@ -66,4 +66,4 @@ Gets the bus voltage of the controller.
 units::volt_t bus_voltage = controller.GetBusVoltage();
 ```
 
-**Contains all the other methods of [Voltage Controller](../voltage-controller)**
+**Contains all the other methods of [Voltage Controller](../../voltagecontroller)**
