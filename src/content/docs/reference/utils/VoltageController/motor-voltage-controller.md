@@ -4,7 +4,7 @@ description: 'Motor voltage controller for the robot'
 ---
 The MotorVoltageController is an adapter for an `frc::MotorController` to a VoltageController.
 
-**See also: [Voltage Controller](../../voltagecontroller)**
+**See also: [Voltage Controller](./index.md**
 
 ## Usage
 
