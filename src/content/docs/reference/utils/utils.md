@@ -1,54 +1,61 @@
 ---
 title: 'Utility Functions'
-description: 'Miscellaneous utility functions'
+description: 'Miscellaneous utility functions and classes'
 ---
 
-This is a collection of utility functions that do not fit in one of the other catagories.
+This is a collection of utility functions and classes that do not fit in one of the other catagories.
 
-## Usage
-
-### now()
+## now()
 
 Returns the current time in seconds since the program started.
 
-#### Usage
-    
+### Usage
+
 ```cpp
 units::second_t time = now();
 ```
 
-### WritePose2NT
+## WritePose2NT
 
 Writes a Pose2d to a NetworkTable.
 
-#### Usage
+### Usage
 ```cpp
 WritePose2NT(table, pose);
 ```
 
-### WritePose3NT
+## WritePose3NT
 
 Writes a Pose3d to a NetworkTable.
 
-#### Usage
+### Usage
 ```cpp
 WritePose3NT(table, pose);
 ```
 
-### deadzone
+## deadzone
 
 Returns 0 if the value is within the deadzone, otherwise returns the value.
 
-#### Usage
+### Usage
 ```cpp
 double val = deadzone(0.1, 0.05);
 ```
 
-### spow2
+## spow2
 
 Returns the square of the value.
 
-#### Usage
+### Usage
 ```cpp
 double val = spow2(2);
+```
+
+## invert
+
+Inverts the system and returns it back to you.
+
+### Usage
+```cpp
+let inverted = invert<System>(system);
 ```
