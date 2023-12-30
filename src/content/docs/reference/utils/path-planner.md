@@ -6,7 +6,6 @@ description: 'Utility to calculate trajectory from WPILib pathplanner'
 The path planner is used to calculate trajectory from WPILibs pathweaver.
 
 ## Usage
-
 You can use it by creating an instance of the path planner class using this code:
 
 ```cpp
@@ -24,7 +23,6 @@ The files can be created using WPILibs pathweaver found [here](https://docs.wpil
 **There are no arguments for the class**
 
 ## Implementation
-
 We have implemented this using the builtin functions in WPILib. The code for reading a file and calculating a trajectory is as follows:
 
 ```cpp

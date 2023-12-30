@@ -2,66 +2,51 @@
 title: 'Voltage Controller'
 description: 'Voltage controller for the robot'
 ---
-
 A VoltageController is analagous to a MotorController, but in terms of voltage instead of speed.
 
-## Usage
-
-### Constructor
-
+## Constructor
 ```cpp
 VoltageController controller;
 ```
 
-### Methods
+## Methods
 
-#### SetVoltage
-
+### SetVoltage
 Sets the voltage of the controller.
 
-##### Usage
-
+#### Usage
 ```cpp
 controller.SetVoltage(12_V);
 ```
 
-#### GetVoltage
-
+### GetVoltage
 Gets the voltage of the controller.
 
-##### Usage
-
+#### Usage
 ```cpp
 units::volt_t voltage = controller.GetVoltage();
 ```
 
-#### SetInverted
-
+### SetInverted
 Sets the inversion of the controller.
 
-##### Usage
-
+#### Usage
 ```cpp
 controller.SetInverted(true);
 ```
 
-#### GetInverted
-
+### GetInverted
 Gets the inversion of the controller.
 
-##### Usage
-
+#### Usage
 ```cpp
 bool inverted = controller.GetInverted();
 ```
 
-#### GetEstimatedRealVoltage
-
+### GetEstimatedRealVoltage
 Get the estimated real voltage of the output, based on the controller voltage.
 
-##### Usage
-
+#### Usage
 ```cpp
 units::volt_t real_voltage = controller.GetEstimatedRealVoltage();
 ```
-

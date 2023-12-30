@@ -4,66 +4,53 @@ description: 'Motor voltage controller for the robot'
 ---
 The MotorVoltageController is an adapter for an `frc::MotorController` to a VoltageController.
 
-**See also: [Voltage Controller](./index.md**
+**See also: [Voltage Controller](./index.md)**
 
-## Usage
-
-### Constructor
-
+## Constructor
 ```cpp
 MotorVoltageController controller(frc::MotorController& motorController);
 ```
 
-### Methods
+## Methods
 
-#### SetVoltage
-
+### SetVoltage
 Sets the voltage of the controller.
 
-##### Usage
-
+#### Usage
 ```cpp
 controller.SetVoltage(12_V);
 ```
 
-#### GetVoltage
-
+### GetVoltage
 Gets the voltage of the controller.
 
-##### Usage
-
+#### Usage
 ```cpp
 units::volt_t voltage = controller.GetVoltage();
 ```
 
-#### SetInverted
-
+### SetInverted
 Sets the inversion of the controller.
 
-##### Usage
-
+#### Usage
 ```cpp
 controller.SetInverted(true);
 ```
 
-#### GetInverted
-
+### GetInverted
 Gets the inversion of the controller.
 
-##### Usage
-
+#### Usage
 ```cpp
 bool inverted = controller.GetInverted();
 ```
 
-#### GetBusVoltage
-
+### GetBusVoltage
 Gets the bus voltage of the controller.
 
-##### Usage
-
+#### Usage
 ```cpp
 units::volt_t bus_voltage = controller.GetBusVoltage();
 ```
 
-**Contains all the other methods of [Voltage Controller](../../voltagecontroller)**
+**Contains all the other methods of [Voltage Controller](./index.md)**
