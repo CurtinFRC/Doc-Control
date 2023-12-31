@@ -3,11 +3,13 @@ title: 'Wombat Style Guide'
 description: 'The official style guide for Wombat code'
 ---
 
+In Wombat we use the WPILib styleguide. Below is some important things some of which aren't well checked by our formatter. For an in depth explanation of our styleguide see the [WPILib Styleguide repo](https://github.com/wpilibsuite/styleguide).
+
 ## Editor Config
 Wombat uses an editorconfig file, which you should apply to your editor using the appropiate plugin.
 
 ## Tabs or Spaces?
-When writing Wombat code you should always use two spaces **not** tab.
+When writing Wombat code you should always use two spaces **not** tabs.
 It is acceptable to remap your tab to use two spaces.
 The only exception to the two spaces rule is when declaring the scope of fields in a class.
 Use one space in this case eg.
@@ -182,4 +184,3 @@ struct Bob
 }
 ```
 will not be accepted.
-
