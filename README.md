@@ -13,6 +13,9 @@ If you would like to contribute to the documentation, please fork the repository
 
 To run the documentation locally, you will need npm (or equivalent) installed. Then run the following commands:
 
+> [!TIP]
+> Use pnpm instead of npm for faster install and build times. Install it with `npm install -g pnpm`
+
 ```bash
 npm install
 npm run dev
