@@ -11,23 +11,21 @@ If you would like to contribute to the documentation, please fork the repository
 
 ## Running
 
-To run the documentation locally, you will need npm (or equivalent) installed. Then run the following commands:
+To run the documentation locally, you will need pnpm (or equivalent) installed. Then run the following commands:
 
-> [!TIP]
-> Use pnpm instead of npm for faster install and build times. Install it with `npm install -g pnpm`
 
 ```bash
-npm install
-npm run dev
+pnpm install
+pnpm run dev
 ```
 
 ## Building
 
-To build the documentation, you will need npm (or equivalent) installed. Then run the following commands:
+To build the documentation, you will need pnpm (or equivalent) installed. Then run the following commands:
 
 ```bash
-npm install
-npm run build
+pnpm install
+pnpm run build
 ```
 
 The built documentation will be in the `dist` directory.
