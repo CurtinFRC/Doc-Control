@@ -10,5 +10,3 @@ sidebar:
 
 ## Manual Swerve Drive
 
-### Constructor
-
