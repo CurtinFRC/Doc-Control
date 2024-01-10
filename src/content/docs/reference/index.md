@@ -1,6 +1,9 @@
 ---
 title: 'Wombat'
 description: 'Thorough documentation of the entire Wombat library explaining usage and implementation'
+
+sidebar:
+    order: 1
 ---
 
 This section of the documentation aims less to provide a guide of how to use Wombat as a whole, or its some of its components but more to provide an in depth explanation of the usage, effect and implementation of everything within Wombat. It can be used as a reference to you whenever you are writing code but would not be an effective place to learn how to use Wombat.
