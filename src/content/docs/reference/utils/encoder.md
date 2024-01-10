@@ -206,5 +206,3 @@ CanEncoder(int deviceNumber, double ticksPerRotation = 4095, double reduction = 
 ```cpp
 CanEncoder *encoder = new CanEncoder(0, 4096);
 ```
-
-
