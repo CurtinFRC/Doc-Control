@@ -321,10 +321,165 @@ SwerveDriveConfig config = swerveDrive->GetConfig();
 ```
 
 
-### Swerve Modules
+## Swerve Modules
+
+### Constructor
+
+```cpp
+SwerveModule(std::string path, SwerveModuleConfig config, angle_pid_conf_t anglePID, velocity_pid_conf_t velocityPID)
+```
+
+#### Example
+
+```cpp
+SwerveModule *swerveModule = new SwerveModule(config);
+```
 
 #### Config
 
 | Type | Name | Description | See Also |
 | --- | --- | --- | --- |
 | `frc::Translation2d` | `position` | The position of the module | |
+| `wom::utils::Gearbox` | `driveMotor` | The drive gearbox | [Gearbox](/reference/utils/gearbox) |
+| `wom::utils::Gearbox` | `turnMotor` | The turn gearbox | [Gearbox](/reference/utils/gearbox) |
+| `CANCoder` | `canEncoder` | The CANCoder | |
+| `units::meter_t` | `wheelRadius` | The radius of the wheel | |
+
+##### Example
+
+```cpp
+SwerveModuleConfig config = {
+    frc::Translation2d(1_m, 1_m),
+    driveMotor,
+    turnMotor,
+    canEncoder,
+    1_m
+};
+```
+
+### SwerveModuleState
+
+An enum of states for the swerve module.
+
+| Name | Value | Description |
+| --- | --- | --- |
+| `kZeroing` | `0` | The module is zeroing |
+| `kIdle` | `1` | The module is idle |
+| `kPID` | `2` | The module is driving in PID mode |
+
+#### Example
+
+```cpp
+SwerveModuleState state = swerveModule->GetState();
+SwerveModuleState newState = SwerveModuleState::kIdle;
+```
+
+### Methods
+
+#### SetZero
+
+Sets PID setpoints to zero.
+
+##### Usage
+
+```cpp
+swerveModule->SetZero();
+```
+
+#### SetIdle
+
+Switches the state to idle.
+
+##### Usage
+
+```cpp
+swerveModule->SetIdle();
+```
+
+#### SetPID
+
+Switches the state to PID and sets the setpoints.
+
+```cpp
+void SetPID(units::radian_t angle, units::meters_per_second_t speed, units::second_t dt)
+```
+
+##### Usage
+
+```cpp
+swerveModule->SetPID(1_rad, 1_mps, 1_s);
+```
+
+#### SetVoltageLimit
+
+Sets the voltage limit.
+
+```cpp
+void SetVoltageLimit(units::volt_t driveVoltageLimit)
+```
+
+##### Usage
+
+```cpp
+swerveModule->SetVoltageLimit(12_V);
+```
+
+#### SetAccelerationLimit
+
+Sets the acceleration limit.
+
+```cpp
+SetAccelerationLimit(units::meters_per_second_squared_t limit)
+```
+
+##### Usage
+
+```cpp
+swerveModule->SetAccelerationLimit(1_mps_sq);
+```
+
+
+#### GetPosition
+
+Gets the position of the module.
+
+##### Usage
+
+```cpp
+frc::SwerveModulePosition position = swerveModule->GetPosition();
+```
+
+#### GetSpeed
+
+Gets the speed of the module.
+
+##### Usage
+
+```cpp
+frc::SwerveModuleSpeed speed = swerveModule->GetSpeed();
+```
+
+#### GetDistance
+
+Gets the distance of the module.
+
+##### Usage
+
+```cpp
+units::meter_t dist = swerveModule->GetDistance();
+```
+
+#### GetConfig
+
+Gets the config of the module.
+
+Returns `SwerveModuleConfig` (see above)
+
+##### Usage
+
+```cpp
+SwerveModuleConfig config = swerveModule->GetConfig();
+```
+
+
+
