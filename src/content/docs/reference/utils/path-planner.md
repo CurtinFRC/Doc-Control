@@ -19,17 +19,6 @@ Then you can use it to calculate trajectory like this:
 pathPlanner.getTrajectory("path/to/trajectory.json");
 ```
 
+where the path is relative to the deploy directory.
+
 The files can be created using WPILibs pathweaver found [here](https://docs.wpilib.org/en/stable/docs/software/pathplanning/pathweaver/introduction.html).
-
-**There are no arguments for the class**
-
-## Implementation
-
-We have implemented this using the builtin functions in WPILib. The code for reading a file and calculating a trajectory is as follows:
-
-```cpp
-frc::Trajectory utils::Pathplanner::getTrajectory(std::string_view path) {
-    fs::path path_location = deploy_directory / path;
-    return frc::TrajectoryUtil::FromPathweaverJson(path_location.string());
-}
-```
