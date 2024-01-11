@@ -91,13 +91,15 @@ wom::Limelight *limelight = new wom::Limelight("limelight name");
 | `PiPMain` | The secondary camera stream is placed in the lower-right corner of the primary camera stream | `wom::LimelightStreamMode::kPiPMain` |
 | `PiPSecondary` | The primary camera stream is placed in the lower-right corner of the secondary camera stream | `wom::LimelightStreamMode::kPiPSecondary` |
 
+
 ### LimelightSnapshot
 
 | Name | Description | Usage |
 | ---- | ----------- | ----- |
 | `Reset` | Reset snapshot mode
- | `LimelightSnapshotMode::kReset` |
+| `LimelightSnapshotMode::kReset` |
 | `Single` | Take two snapshots per second | `wom::LimelightSnapshotMode::kSingle` |
+
 
 ## Methods
 

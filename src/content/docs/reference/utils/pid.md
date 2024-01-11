@@ -42,8 +42,6 @@ wom::SwerveDriveConfig::pose_angle_conf_t config {
 | `wom::PIDConfig::deriv_t` | `stableDerivThresh` | The derivative threshold for the PID loop to be considered stable | |
 | `in_t` | `izone` | The integral zone | |
 
-`in_t` is the input type, `out_t` is the output type, `kp_t` is the proportional gain type, `ki_t` is the integral gain type, `kd_t` is the derivative gain type, `error_t` is the error threshold type, `deriv_t` is the derivative threshold type.
-
 ## PID Loop
 
 Then you can create a PID loop using the following code:

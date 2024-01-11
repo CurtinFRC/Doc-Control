@@ -28,4 +28,3 @@ Shooter *shooter = new Shooter("shooter path (in nt tables)", config); // config
 
 ## Methods
 
-
