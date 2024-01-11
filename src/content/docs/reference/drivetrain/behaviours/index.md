@@ -8,7 +8,7 @@ description: Collection of tank drive behaviours
 ### Behaviour
 
 ```cpp
-_tankDrive = new TankDrive(config);
+wom::TankDrive _tankDrive = new wom::TankDrive(config);
 
 wom::BehaviourScheduler::GetInstance()->Register(_tankDrive);
 _tankDrive->SetDefaultBehaviour([this]() {
@@ -17,4 +17,4 @@ _tankDrive->SetDefaultBehaviour([this]() {
 ```
 
 - `controller` is a `frc::XboxController` object
-- `config` is a `TankDriveConfig` object ([docs here](/reference/drivetrain/tank-drive#config))
+- `config` is a `wom::TankDriveConfig` object ([docs here](/reference/drivetrain/tank-drive#config))

@@ -128,13 +128,13 @@ units::radians_per_second_t velocity = encoder->GetEncoderAngularVelocity();
 ### Constructor
 
 ```cpp
-DigitalEncoder(int channelA, int channelB, double ticksPerRotation, double reduction = 1)
+wom::DigitalEncoder(int channelA, int channelB, double ticksPerRotation, double reduction = 1)
 ```
 
 #### Example
 
 ```cpp
-DigitalEncoder *encoder = new DigitalEncoder(0, 1, 4096);
+wom::DigitalEncoder *encoder = new wom::DigitalEncoder(0, 1, 4096);
 ```
 
 ## CANSparkMaxEncoder
@@ -142,13 +142,13 @@ DigitalEncoder *encoder = new DigitalEncoder(0, 1, 4096);
 ### Constructor
 
 ```cpp
-CANSparkMaxEncoder(rev::CANSparkMax *controller, double reduction = 1)
+wom::CANSparkMaxEncoder(rev::CANSparkMax *controller, double reduction = 1)
 ```
 
 #### Example
 
 ```cpp
-CANSparkMaxEncoder *encoder = new CANSparkMaxEncoder(&controller);
+wom::CANSparkMaxEncoder *encoder = new wom::CANSparkMaxEncoder(&controller);
 ```
 
 ## TalonFXEncoder
@@ -156,13 +156,13 @@ CANSparkMaxEncoder *encoder = new CANSparkMaxEncoder(&controller);
 ### Constructor
 
 ```cpp
-TalonFXEncoder(ctre::phoenix::motorcontrol::can::TalonFX *controller, double reduction = 1)
+wom::TalonFXEncoder(ctre::phoenix::motorcontrol::can::TalonFX *controller, double reduction = 1)
 ```
 
 #### Example
 
 ```cpp
-TalonFXEncoder *encoder = new TalonFXEncoder(&controller);
+wom::TalonFXEncoder *encoder = new wom::TalonFXEncoder(&controller);
 ```
 
 ## TalonSRXEncoder
@@ -170,13 +170,13 @@ TalonFXEncoder *encoder = new TalonFXEncoder(&controller);
 ### Constructor
 
 ```cpp
-TalonSRXEncoder(ctre::phoenix::motorcontrol::can::TalonSRX *controller, double ticksPerRotation, double reduction = 1);
+wom::TalonSRXEncoder(ctre::phoenix::motorcontrol::can::TalonSRX *controller, double ticksPerRotation, double reduction = 1);
 ```
 
 #### Example
 
 ```cpp
-TalonSRXEncoder *encoder = new TalonSRXEncoder(&controller, 4096);
+wom::TalonSRXEncoder *encoder = new wom::TalonSRXEncoder(&controller, 4096);
 ```
 
 ## DutyCycleEncoder
@@ -184,13 +184,13 @@ TalonSRXEncoder *encoder = new TalonSRXEncoder(&controller, 4096);
 ### Constructor
 
 ```cpp
-DutyCycleEncoder(int channel, double ticksPerRotation = 1, double reduction = 1)
+wom::DutyCycleEncoder(int channel, double ticksPerRotation = 1, double reduction = 1)
 ```
 
 #### Example
 
 ```cpp
-DutyCycleEncoder *encoder = new DutyCycleEncoder(0, 4096);
+wom::DutyCycleEncoder *encoder = new wom::DutyCycleEncoder(0, 4096);
 ```
 
 ## CanEncoder
@@ -198,11 +198,11 @@ DutyCycleEncoder *encoder = new DutyCycleEncoder(0, 4096);
 ### Constructor
 
 ```cpp
-CanEncoder(int deviceNumber, double ticksPerRotation = 4095, double reduction = 1, std::string name = "Drivebase")
+wom::CanEncoder(int deviceNumber, double ticksPerRotation = 4095, double reduction = 1, std::string name = "Drivebase")
 ```
 
 #### Example
 
 ```cpp
-CanEncoder *encoder = new CanEncoder(0, 4096);
+wom::CanEncoder *encoder = new wom::CanEncoder(0, 4096);
 ```

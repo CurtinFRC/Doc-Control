@@ -14,7 +14,7 @@ Returns the current time in seconds since the program started.
 #### Usage
     
 ```cpp
-units::second_t time = now();
+units::second_t time = wom::now();
 ```
 
 ### WritePose2NT
@@ -23,7 +23,7 @@ Writes a Pose2d to a NetworkTable.
 
 #### Usage
 ```cpp
-WritePose2NT(table, pose);
+wom::WritePose2NT(table, pose);
 ```
 
 ### WritePose3NT
@@ -32,7 +32,7 @@ Writes a Pose3d to a NetworkTable.
 
 #### Usage
 ```cpp
-WritePose3NT(table, pose);
+wom::WritePose3NT(table, pose);
 ```
 
 ### WriteTrajectory
@@ -41,7 +41,7 @@ Writes a Trajectory to a NetworkTable.
 
 #### Usage
 ```cpp
-WriteTrajectory(table, trajectory);
+wom::WriteTrajectory(table, trajectory);
 ```
 
 ### WriteTrajectoryState
@@ -50,7 +50,7 @@ Writes a Trajectory State (`frc::Trajectory::State`) to a NetworkTable.
 
 #### Usage
 ```cpp
-WriteTrajectoryState(table, trajectoryState);
+wom::WriteTrajectoryState(table, trajectoryState);
 ```
 
 ### TrajectoryStateToPose2d
@@ -59,7 +59,7 @@ Converts a Trajectory State (`frc::Trajectory::State`) to a Pose2d.
 
 #### Usage
 ```cpp
-Pose2d pose = TrajectoryStateToPose2d(trajectoryState);
+Pose2d pose = wom::TrajectoryStateToPose2d(trajectoryState);
 ```
 
 ### deadzone
@@ -68,7 +68,7 @@ Returns 0 if the value is within the deadzone, otherwise returns the value.
 
 #### Usage
 ```cpp
-double val = deadzone(0.1, 0.05);
+double val = wom::deadzone(0.1, 0.05);
 ```
 
 ### spow2
@@ -77,7 +77,7 @@ Returns the square of the value.
 
 #### Usage
 ```cpp
-double val = spow2(2);
+double val = wom::spow2(2);
 ```
 
 ## NTBound
@@ -87,14 +87,14 @@ A class that binds a NetworkTable entry to a variable.
 ### Constructor
 
 ```cpp
-NTBound(std::shared_ptr<nt::NetworkTable> table, std::string name, const nt::Value &value,
+wom::NTBound(std::shared_ptr<nt::NetworkTable> table, std::string name, const nt::Value &value,
         std::function<void(const nt::Value &)> onUpdateFn)
 ```
 
 #### Example
 
 ```cpp
-NTBound bound = NTBound(table, "name", nt::Value::MakeDouble(0), [](const nt::Value &v) {
+wom::NTBound bound = wom::NTBound(table, "name", nt::Value::MakeDouble(0), [](const nt::Value &v) {
   std::cout << "Value updated to " << v.GetDouble() << std::endl;
 });
 ```
@@ -106,7 +106,7 @@ A class that binds a NetworkTable entry to a double.
 #### Constructor
 
 ```cpp
-NTBoundDouble(std::shared_ptr<nt::NetworkTable> table, std::string name, double &val)
+wom::NTBoundDouble(std::shared_ptr<nt::NetworkTable> table, std::string name, double &val)
 ```
 
 #### Example
@@ -114,7 +114,7 @@ NTBoundDouble(std::shared_ptr<nt::NetworkTable> table, std::string name, double 
 ```cpp
 double val = 0;
 
-NTBoundDouble bound = NTBoundDouble(table, "name", val);
+wom::NTBoundDouble bound = wom::NTBoundDouble(table, "name", val);
 ```
 
 ### NTBoundUnit
@@ -124,7 +124,7 @@ A class that binds a NetworkTable entry to a unit.
 #### Constructor
 
 ```cpp
-NTBoundUnit(std::shared_ptr<nt::NetworkTable> table, std::string name, units::unit_t<T> &val)
+wom::NTBoundUnit(std::shared_ptr<nt::NetworkTable> table, std::string name, units::unit_t<T> &val)
 ```
 
 #### Example
@@ -132,5 +132,5 @@ NTBoundUnit(std::shared_ptr<nt::NetworkTable> table, std::string name, units::un
 ```cpp
 units::meter_t val = 0_m;
 
-NTBoundUnit bound = NTBoundUnit(table, "name", val);
+wom::NTBoundUnit bound = wom::NTBoundUnit(table, "name", val);
 ```

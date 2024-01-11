@@ -7,7 +7,7 @@ A VoltageController is analagous to a MotorController, but in terms of voltage i
 
 ## Constructor
 ```cpp
-VoltageController *controller = new VoltageController(frc::MotorController &motorController);
+wom::VoltageController *controller = new wom::VoltageController(frc::MotorController &motorController);
 ```
 
 ## Methods

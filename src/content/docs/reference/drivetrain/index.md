@@ -8,7 +8,7 @@ A way to use tankdrive in wombat.
 ## Constructor
 
 ```cpp
-TankDrive *tankDrive = new TankDrive(config);
+wom::TankDrive *tankDrive = new wom::TankDrive(config);
 ```
 
 ### Config
@@ -16,12 +16,12 @@ TankDrive *tankDrive = new TankDrive(config);
 | Type | Name | Description | See Also |
 | --- | --- | --- | --- |
 | `std::string` | `path` | The path in the networktables | |
-| `wom::utils::Gearbox` | `left1` | The first gearbox on the left | [Gearbox](/reference/utils/gearbox) |
-| `wom::utils::Gearbox` | `left2` | The second gearbox on the left | [Gearbox](/reference/utils/gearbox) |
-| `wom::utils::Gearbox` | `left3` | The third gearbox on the left | [Gearbox](/reference/utils/gearbox) |
-| `wom::utils::Gearbox` | `right1` | The first gearbox on the right | [Gearbox](/reference/utils/gearbox) |
-| `wom::utils::Gearbox` | `right2` | The second gearbox on the right | [Gearbox](/reference/utils/gearbox) |
-| `wom::utils::Gearbox` | `right3` | The third gearbox on the right | [Gearbox](/reference/utils/gearbox) |
+| `wom::Gearbox` | `left1` | The first gearbox on the left | [Gearbox](/reference/utils/gearbox) |
+| `wom::Gearbox` | `left2` | The second gearbox on the left | [Gearbox](/reference/utils/gearbox) |
+| `wom::Gearbox` | `left3` | The third gearbox on the left | [Gearbox](/reference/utils/gearbox) |
+| `wom::Gearbox` | `right1` | The first gearbox on the right | [Gearbox](/reference/utils/gearbox) |
+| `wom::Gearbox` | `right2` | The second gearbox on the right | [Gearbox](/reference/utils/gearbox) |
+| `wom::Gearbox` | `right3` | The third gearbox on the right | [Gearbox](/reference/utils/gearbox) |
 
 #### Example
 
@@ -29,7 +29,7 @@ TankDrive *tankDrive = new TankDrive(config);
 // Rest of you code here
 // left1, left2, left3, right1, right2, right3 are all Gearbox objects
 
-TankDriveConfig config = {
+wom::TankDriveConfig config = {
     "drivetrain",
     left1,
     left2,
@@ -39,7 +39,7 @@ TankDriveConfig config = {
     right3
 };
 
-TankDrive *tankDrive = new TankDrive(config);
+wom::TankDrive *tankDrive = new wom::TankDrive(config);
 ```
 
 ## TankDriveState
@@ -54,9 +54,9 @@ An enum of states for the tankdrive.
 ### Example
 
 ```cpp
-TankDriveState state = tankDrive->GetState();
+wom::TankDriveState state = tankDrive->GetState();
 
-TankDriveState newState = TankDriveState::kIdle;
+wom::TankDriveState newState = wom::TankDriveState::kIdle;
 ```
 
 ## TankSpeeds
@@ -71,8 +71,8 @@ A struct of speeds for the tankdrive.
 ### Example
 
 ```cpp
-TankSpeeds speeds = tankDrive->GetSpeeds();
-TankSpeeds newSpeeds = {0.5, 0.5};
+wom::TankSpeeds speeds = tankDrive->GetSpeeds();
+wom::TankSpeeds newSpeeds = {0.5, 0.5};
 ```
 
 ## Methods
@@ -81,24 +81,24 @@ TankSpeeds newSpeeds = {0.5, 0.5};
 
 Gets the config of the drivetrain.
 
-Returns `TankDriveConfig` (see above)
+Returns `wom::TankDriveConfig` (see above)
 
 #### Usage
 
 ```cpp
-TankDriveConfig config = tankDrive->GetConfig();
+wom::TankDriveConfig config = tankDrive->GetConfig();
 ```
 
 ### GetState
 
 Gets the state of the drivetrain.
 
-Returns `TankDriveState` (see above)
+Returns `wom::TankDriveState` (see above)
 
 #### Usage
 
 ```cpp
-TankDriveState state = tankDrive->GetState();
+wom::TankDriveState state = tankDrive->GetState();
 ```
 
 ### SetState
@@ -108,7 +108,7 @@ Sets the state of the drivetrain.
 #### Usage
 
 ```cpp
-tankDrive->SetState(TankDriveState::kIdle);
+tankDrive->SetState(wom::TankDriveState::kIdle);
 ```
 
 ### SetSpeed
@@ -125,12 +125,12 @@ tankDrive->SetSpeed(speeds);
 
 Gets the speeds of the drivetrain.
 
-Returns `TankSpeeds` (see above)
+Returns `wom::TankSpeeds` (see above)
 
 #### Usage
 
 ```cpp
-TankSpeeds speeds = tankDrive->GetSpeeds();
+wom::TankSpeeds speeds = tankDrive->GetSpeeds();
 ```
 
 

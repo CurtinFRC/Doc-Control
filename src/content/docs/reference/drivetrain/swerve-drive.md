@@ -8,7 +8,7 @@ description: Swervedrive stuff
 ```cpp
 frc::Pose2d initial_pose = frc::Pose2d(0_m, 0_m, 0_rad);
 
-SwerveDrive *swerveDrive = new SwerveDrive(config, initial_pose);
+wom::SwerveDrive *swerveDrive = new wom::SwerveDrive(config, initial_pose);
 ```
 
 ### Config
@@ -16,10 +16,10 @@ SwerveDrive *swerveDrive = new SwerveDrive(config, initial_pose);
 | Type | Name | Description | See Also |
 | --- | --- | --- | --- |
 | `std::string` | `path` | The path in the networktables | |
-| `SwerveModule::angle_pid_conf_t` | `anglePID` | The angle PID config | [SwerveModule](#swerve-modules) |  
-| `SwerveModule::velocity_pid_conf_t` | `velocityPID` | The velocity PID config | [SwerveModule](#swerve-modules) |
+| `wom::SwerveModule::angle_pid_conf_t` | `anglePID` | The angle PID config | [SwerveModule](#swerve-modules) |  
+| `wom::SwerveModule::velocity_pid_conf_t` | `velocityPID` | The velocity PID config | [SwerveModule](#swerve-modules) |
 | `wpi::array<SwerveModuleConfig, 4>` | `modules` | The modules | [SwerveModule](#swerve-modules) |
-| `wom::utils::Gyro` | `gyro` | The gyro | [Gyro](/reference/utils/gyro) |
+| `wom::Gyro` | `gyro` | The gyro | [Gyro](/reference/utils/gyro) |
 | `units::kilogram_t` | `mass` | The mass of the robot | |
 | `wpi::array<double, 3>` | `stateStdDevs` | The standard deviations of the state | |
 | `wpi::array<double, 3>` | `visionMeasurementStdDevs` | The standard deviations of the vision measurements | |
@@ -27,7 +27,7 @@ SwerveDrive *swerveDrive = new SwerveDrive(config, initial_pose);
 #### Example
 
 ```cpp
-SwerveDriveConfig config;
+wom::SwerveDriveConfig config;
 ```
 
 ## SwerveDriveState
@@ -50,8 +50,8 @@ An enum of states for the swervedrive.
 ### Example
 
 ```cpp
-SwerveDriveState state = swerveDrive->GetState();
-SwerveDriveState newState = SwerveDriveState::kIdle;
+wom::SwerveDriveState state = swerveDrive->GetState();
+wom::SwerveDriveState newState = wom::SwerveDriveState::kIdle;
 ```
 
 ## FieldRelativeSpeeds
@@ -77,7 +77,7 @@ swerveDrive->SetFieldRelativeVelocity({1_mps, 1_mps, 1_rad_per_s});
 Switches the state to handle the robot's rotation matching that of the joystick.
 
 ```cpp
-void RotateMatchJoystick(units::radian_t joystickAngle, FieldRelativeSpeeds speeds)
+void RotateMatchJoystick(units::radian_t joystickAngle, wom::FieldRelativeSpeeds speeds)
 ```
 
 #### Usage
@@ -127,7 +127,7 @@ Switches the state to field relative velocity.
 See [Field Relative Speeds](#field-relative-speeds).
 
 ```cpp
-void SetFieldRelativeVelocity(FieldRelativeSpeeds speeds)
+void SetFieldRelativeVelocity(wom::FieldRelativeSpeeds speeds)
 ```
 
 #### Usage
