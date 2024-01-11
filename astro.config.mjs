@@ -8,9 +8,9 @@ export default defineConfig({
 			title: 'Wombat Docs',
 			social: {
 				github: 'https://github.com/CurtinFRC',
-        youtube: 'https://youtube.com/@CurtinFRC4788CantControl',
-        instagram: 'https://instagram.com/frcteam4788',
-        facebook: 'https://facebook.com/Team4788',
+				youtube: 'https://youtube.com/@CurtinFRC4788CantControl',
+				instagram: 'https://instagram.com/frcteam4788',
+				facebook: 'https://facebook.com/Team4788',
 			},
 			sidebar: [
 				{
@@ -25,6 +25,9 @@ export default defineConfig({
 					label: 'Reference',
 					autogenerate: { directory: 'reference' },
 				},
+				// logo: {
+				// 	src: './src/assets/my-logo.svg',
+				// },
         // {
         //   label: 'Setting Up Your Own Project',
         //   autogenerate: { directory: 'setup' },
