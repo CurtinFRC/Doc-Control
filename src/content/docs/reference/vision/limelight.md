@@ -251,3 +251,30 @@ bool IsAtSetPoseVision(frc::Pose3d pose, units::second_t dt);
 bool isAtSetPose = limelight->IsAtSetPoseVision(frc::Pose3d(0_m, 0_m, 0_rad), 0_s);
 ```
 
+### GetSpeed
+
+Gets the speed of the limelight between two poses.
+
+```cpp
+units::meters_per_second_t GetSpeed(frc::Pose3d pose1, frc::Pose3d pose2, units::second_t dt);
+```
+
+#### Example
+
+```cpp
+units::meters_per_second_t speed = limelight->GetSpeed(frc::Pose3d(0_m, 0_m, 0_rad), frc::Pose3d(0_m, 0_m, 0_rad), 0_s);
+```
+
+### GetPose
+
+Gets the pose of the limelight.
+
+```cpp
+frc::Pose3d GetPose();
+```
+
+#### Example
+
+```cpp
+frc::Pose3d pose = limelight->GetPose();
+```
