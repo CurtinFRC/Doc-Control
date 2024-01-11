@@ -12,7 +12,7 @@ To create PID loop, you need to create a `PIDConfig` object.
 To create one you can use the following constructor:
 
 ```cpp
-PIDConfig(std::string path, kp_t kp = kp_t{0}, ki_t ki = ki_t{0}, kd_t kd = kd_t{0},
+wom::PIDConfig(std::string path, kp_t kp = kp_t{0}, ki_t ki = ki_t{0}, kd_t kd = kd_t{0},
             error_t stableThresh = error_t{-1}, deriv_t stableDerivThresh = deriv_t{-1},
             in_t izone = in_t{-1})
 ```
@@ -35,12 +35,14 @@ wom::SwerveDriveConfig::pose_angle_conf_t config {
 | Type | Name | Description | See Also |
 | --- | --- | --- | --- |
 | `std::string` | `path` | The path in the networktables | |
-| `kp_t` | `kp` | The proportional gain | |
-| `ki_t` | `ki` | The integral gain | |
-| `kd_t` | `kd` | The derivative gain | |
-| `error_t` | `stableThresh` | The error threshold for the PID loop to be considered stable | |
-| `deriv_t` | `stableDerivThresh` | The derivative threshold for the PID loop to be considered stable | |
+| `wom::PIDConfig::kp_t` | `kp` | The proportional gain | |
+| `wom::PIDConfig::ki_t` | `ki` | The integral gain | |
+| `wom::PIDConfig::kd_t` | `kd` | The derivative gain | |
+| `wom::PIDConfig::error_t` | `stableThresh` | The error threshold for the PID loop to be considered stable | |
+| `wom::PIDConfig::deriv_t` | `stableDerivThresh` | The derivative threshold for the PID loop to be considered stable | |
 | `in_t` | `izone` | The integral zone | |
+
+`in_t` is the input type, `out_t` is the output type, `kp_t` is the proportional gain type, `ki_t` is the integral gain type, `kd_t` is the derivative gain type, `error_t` is the error threshold type, `deriv_t` is the derivative threshold type.
 
 ## PID Loop
 
@@ -53,7 +55,7 @@ class Example {
     public:
         Example();
     private:
-        wom::PID<IN, OUT> _pid;
+        wom::PIDController<IN, OUT> _pid;
 };
 ```
 

@@ -11,7 +11,7 @@ sidebar:
 ## Manual Swerve Drive
 
 ```cpp
-_swerveDrive = new SwerveDrive(config, frc::Pose2d());
+wom::SwerveDrive _swerveDrive = new wom::SwerveDrive(config, frc::Pose2d());
 wom::BehaviourScheduler::GetInstance()->Register(_swerveDrive);
 _swerveDrive->SetDefaultBehaviour([this]() {
     return wom::make<wom::ManualDrivebase>(_swerveDrive, &controller);
@@ -19,12 +19,12 @@ _swerveDrive->SetDefaultBehaviour([this]() {
 ```
 
 - `controller` is a `frc::XboxController` object
-- `config` is a `SwerveBaseConfig` object ([docs here](/reference/drivetrain/swerve-drive#config))
+- `config` is a `wom::SwerveBaseConfig` object ([docs here](/reference/drivetrain/swerve-drive#config))
 
 ## XDrivebase
 
 ```cpp
-_swerveDrive = new SwerveDrive(config, frc::Pose2d());
+wom::SwerveDrive _swerveDrive = new wom::SwerveDrive(config, frc::Pose2d());
 
 wom::BehaviourScheduler::GetInstance()->Register(_swerveDrive);
 _swerveDrive->SetDefaultBehaviour([this]() {
@@ -37,7 +37,7 @@ _swerveDrive->SetDefaultBehaviour([this]() {
 ## Follow Trajectory
 
 ```cpp
-_swerveDrive = new SwerveDrive(config, frc::Pose2d());
+wom::SwerveDrive _swerveDrive = new wom::SwerveDrive(config, frc::Pose2d());
 
 wom::utils::PathPlanner pathPlanner;
 
@@ -50,7 +50,7 @@ _swerveDrive->SetDefaultBehaviour([this]() {
 
 - `config` is a `SwerveBaseConfig` object ([docs here](/reference/drivetrain/swerve-drive#config))
 - `path/to/trajectory.json` is the path to the trajectory file relative to the deploy directory
-- `pathPlanner` is a `wom::utils::PathPlanner` object ([docs here](/reference/utils/path-planner))
+- `pathPlanner` is a `wom::PathPlanner` object ([docs here](/reference/utils/path-planner))
 
 ## Simulated Swerve Drive
 
@@ -59,9 +59,9 @@ _swerveDrive->SetDefaultBehaviour([this]() {
 frc::Timer timer;
 frc::Field2d field2d;
 
-_swerveDrive = new SwerveDrive(config, frc::Pose2d());
+wom::SwerveDrive _swerveDrive = new wom::SwerveDrive(config, frc::Pose2d());
 
-_simDrive = new TempSimSwerveDrive(&field2d, &timer);
+wom::SwerveDrive _simDrive = new wom::TempSimSwerveDrive(&field2d, &timer);
 
 _simDrive->SetPath("path/to/trajectory.json"); // relative to deploy directory
 
