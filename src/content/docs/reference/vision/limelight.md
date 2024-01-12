@@ -129,7 +129,7 @@ std::pair<double, double> offset = limelight->GetOffset();
 Gets the AprilTag data from the limelight. The string that you pass in corresponds to the data that you want to fetch from it.
 
 ```cpp
-std::vector<double> GetAprilTagData(wom::LimeLightAprilTagData dataType);
+std::vector<double> GetAprilTagData(wom::LimelightAprilTagData dataType);
 ```
 
 #### Example
