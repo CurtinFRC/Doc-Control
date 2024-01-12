@@ -5,7 +5,7 @@ description: Vision subsystem
 
 The limelight API is for interfacing with limelights in a behaviour form.
 
-To create and schedule a limelight behaviour, you can use the following code:
+To create a limelight, you can use the following code:
 
 ```cpp
 wom::Limelight *limelight = new wom::Limelight("limelight name");
