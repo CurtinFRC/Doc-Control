@@ -96,8 +96,7 @@ wom::Limelight *limelight = new wom::Limelight("limelight name");
 
 | Name | Description | Usage |
 | ---- | ----------- | ----- |
-| `Reset` | Reset snapshot mode
-| `LimelightSnapshotMode::kReset` |
+| `Reset` | Reset snapshot mode | `wom::LimelightSnapshotMode::kReset` |
 | `Single` | Take two snapshots per second | `wom::LimelightSnapshotMode::kSingle` |
 
 
