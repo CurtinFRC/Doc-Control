@@ -3,7 +3,9 @@ title: Limelight
 description: Vision subsystem
 ---
 
-The limelight API is for interfacing with limelights in a behaviour form.
+**Read the official Limelight documentation [here](https://docs.limelightvision.io/en/latest/).**
+
+The limelight API is for interfacing with limelights in the robot code. It is a wrapper around the network tables API.
 
 To create a limelight, you can use the following code:
 
