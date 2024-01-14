@@ -67,7 +67,7 @@ A struct of speeds for the swervedrive.
 ### Example
 
 ```cpp
-swerveDrive->SetFieldRelativeVelocity({1_mps, 1_mps, 1_rad_per_s});
+swerveDrive->SetFieldRelativeVelocity(wom::FieldRelativeSpeeds{1_mps, 1_mps, 1_rad_per_s});
 ```
 
 ## Methods
@@ -83,7 +83,7 @@ void RotateMatchJoystick(units::radian_t joystickAngle, wom::FieldRelativeSpeeds
 #### Usage
 
 ```cpp
-swerveDrive->RotateMatchJoystick(1_rad, {1_mps, 1_mps, 1_rad_per_s});
+swerveDrive->RotateMatchJoystick(1_rad, wom::FieldRelativeSpeeds{1_mps, 1_mps, 1_rad_per_s});
 ```
 
 ### SetIdle
@@ -117,7 +117,7 @@ void SetVelocity(frc::ChassisSpeeds speeds)
 #### Usage
 
 ```cpp
-swerveDrive->SetVelocity({1_mps, 1_mps, 1_rad_per_s});
+swerveDrive->SetVelocity(frc::ChassisSpeeds());
 ```
 
 ### SetFieldRelativeVelocity
@@ -133,7 +133,7 @@ void SetFieldRelativeVelocity(wom::FieldRelativeSpeeds speeds)
 #### Usage
 
 ```cpp
-swerveDrive->SetFieldRelativeVelocity({1_mps, 1_mps, 1_rad_per_s});
+swerveDrive->SetFieldRelativeVelocity(wom::FieldRelativeSpeeds{1_mps, 1_mps, 1_rad_per_s});
 ```
 
 ### SetPose
@@ -281,7 +281,7 @@ void ResetPose(frc::Pose2d pose)
 #### Usage
 
 ```cpp
-swerveDrive->ResetPose({1_m, 1_m, 1_rad});
+swerveDrive->ResetPose(frc::Pose2d());
 ```
 
 ### GetPose
@@ -305,7 +305,7 @@ void AddVisionMeasurement(frc::Pose2d pose, units::second_t timestamp)
 #### Usage
 
 ```cpp
-swerveDrive->AddVisionMeasurement({1_m, 1_m, 1_rad}, 1_s);
+swerveDrive->AddVisionMeasurement(frc::Pose2d(), 1_s);
 ```
 
 ### GetConfig
@@ -348,7 +348,7 @@ SwerveModule *swerveModule = new SwerveModule(config);
 ##### Example
 
 ```cpp
-SwerveModuleConfig config = {
+SwerveModuleConfig config{
     frc::Translation2d(1_m, 1_m),
     driveMotor,
     turnMotor,
