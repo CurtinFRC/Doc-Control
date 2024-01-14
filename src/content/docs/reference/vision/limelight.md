@@ -3,9 +3,11 @@ title: Limelight
 description: Vision subsystem
 ---
 
-The limelight API is for interfacing with limelights in a behaviour form.
+**Read the official Limelight documentation [here](https://docs.limelightvision.io/en/latest/).**
 
-To create and schedule a limelight behaviour, you can use the following code:
+The limelight API is for interfacing with limelights in the robot code. It is a wrapper around the network tables API.
+
+To create a limelight, you can use the following code:
 
 ```cpp
 wom::Limelight *limelight = new wom::Limelight("limelight name");
@@ -96,8 +98,7 @@ wom::Limelight *limelight = new wom::Limelight("limelight name");
 
 | Name | Description | Usage |
 | ---- | ----------- | ----- |
-| `Reset` | Reset snapshot mode
-| `LimelightSnapshotMode::kReset` |
+| `Reset` | Reset snapshot mode | `wom::LimelightSnapshotMode::kReset` |
 | `Single` | Take two snapshots per second | `wom::LimelightSnapshotMode::kSingle` |
 
 
@@ -129,8 +130,10 @@ std::pair<double, double> offset = limelight->GetOffset();
 
 Gets the AprilTag data from the limelight. The string that you pass in corresponds to the data that you want to fetch from it.
 
+You can see all of the types of data [here](#limelightapriltagdata).
+
 ```cpp
-std::vector<double> GetAprilTagData(wom::LimeLightAprilTagData dataType);
+std::vector<double> GetAprilTagData(wom::LimelightAprilTagData dataType);
 ```
 
 #### Example
@@ -142,6 +145,8 @@ std::vector<double> data = limelight->GetAprilTagData(wom::LimeLightAprilTagData
 ### GetTargetingData
 
 Gets the targeting data from the limelight. The string that you pass in corresponds to the data that you want to fetch from it.
+
+You can see all of the types of data [here](#limelighttargetingdata).
 
 ```cpp
 double GetTargetingData(wom::LimelightTargetingData, double defaultValue = 0.0)
@@ -157,6 +162,8 @@ double data = limelight->GetTargetingData(wom::LimelightTargetingData::kTx);
 
 Sets the LED mode of the limelight.
 
+You can see all of the types of LED modes [here](#limelightledmode).
+
 ```cpp
 void SetLEDMode(wom::LimelightLEDMode mode);
 ```
@@ -170,6 +177,8 @@ limelight->SetLEDMode(wom::LimelightLEDMode::kForceOn);
 ### SetCamMode
 
 Sets the camera mode of the limelight.
+
+You can see all of the types of camera modes [here](#limelightcammode).
 
 ```cpp
 void SetCamMode(wom::LimelightCamMode mode);
@@ -185,6 +194,8 @@ limelight->SetCamMode(wom::LimelightCamMode::kDriverCamera);
 
 Sets the pipeline of the limelight.
 
+You can see all of the types of pipelines [here](#limelightpipeline).
+
 ```cpp
 void SetPipeline(wom::LimelightPipeline pipeline);
 ```
@@ -199,6 +210,8 @@ limelight->SetPipeline(wom::LimelightPipeline::kPipeline0);
 
 Sets the stream mode of the limelight.
 
+You can see all of the types of stream modes [here](#limelightstreammode).
+
 ```cpp
 void SetStreamMode(wom::LimelightStreamMode mode);
 ```
@@ -212,6 +225,8 @@ limelight->SetStreamMode(wom::LimelightStreamMode::kPiPMain);
 ### SetSnapshot
 
 Sets the snapshot mode of the limelight.
+
+You can see all of the types of snapshot modes [here](#limelightsnapshot).
 
 ```cpp
 void SetSnapshot(wom::LimelightSnapshot mode);
