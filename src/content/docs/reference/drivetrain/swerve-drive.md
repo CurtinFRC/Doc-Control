@@ -147,7 +147,7 @@ void SetPose(frc::Pose2d pose)
 #### Usage
 
 ```cpp
-swerveDrive->SetPose({1_m, 1_m, 1_rad});
+swerveDrive->SetPose(frc::Pose2d(1_m, 1_m, 1_rad));
 ```
 
 ### IsAtSetPose
