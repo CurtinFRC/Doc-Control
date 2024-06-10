@@ -2,6 +2,7 @@
 title: Wombat Documentation!
 description: 4788's code documentation
 ---
+A collection of resources to help 4788 programmers.
 
 ## Other documentation sources
 - [WPILib docs](https://docs.wpilib.org/en/stable/index.html)
