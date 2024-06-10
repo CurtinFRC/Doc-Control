@@ -14,17 +14,20 @@ export default defineConfig({
 			},
 			sidebar: [
 				{
-					label: 'Guides',
-					items: [
-						// Each item here is one entry in the navigation menu.
-						{ label: 'Behaviours', link: '/guides/behaviours/' },
-						{ label: 'Style Guide', link: '/guides/style/' },
-					],
+					label: 'Docs',
+				        autogenerate: { directory: '/' },
+
 				},
 				{
-					label: 'Reference',
-					autogenerate: { directory: 'reference' },
-				},
+					Label: 'External Docs',
+					items: [
+						// Each item here is one entry in the navigation menu.
+						{ label: 'WPILib Documentation', link: 'https://docs.wpilib.org/en/stable/index.html' },
+						{ label: 'CTRE Documentation', link: 'https://v6.docs.ctr-electronics.com/en/stable/' },
+						{ label: 'REV Documentation', link: 'https://docs.revrobotics.com/brushless/spark-flex/revlib' },
+						{ label: 'Choreo Documentation', link: 'https://sleipnirgroup.github.io/Choreo/' }
+					],
+				}
 				// logo: {
 				// 	src: './src/assets/my-logo.svg',
 				// },
