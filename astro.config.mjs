@@ -23,10 +23,10 @@ export default defineConfig({
 					label: 'External Docs',
 					items: [
 						// Each item here is one entry in the navigation menu.
-						{ label: 'WPILib Documentation', link: '/other/wpilib' },
-						{ label: 'CTRE Documentation', link: 'other/ctre' },
-						{ label: 'REV Documentation', link: 'other/revlib' },
-						{ label: 'Choreo Documentation', link: 'other/choreo' },
+						{ label: 'WPILib Documentation', link: 'https://docs.wpilib.org/en/stable/index.html' },
+						{ label: 'CTRE Documentation', link: 'https://v6.docs.ctr-electronics.com/en/stable/' },
+						{ label: 'REV Documentation', link: 'https://docs.revrobotics.com/brushless/spark-flex/revlib' },
+						{ label: 'Choreo Documentation', link: 'https://sleipnirgroup.github.io/Choreo/' },
 					],
 				},
 			],
