@@ -1,4 +1,4 @@
-# Wombat Docs
+# Doc Control
 Documentation to help 4788 programmers learn how to write FRC code.
 
 > [!IMPORTANT]
