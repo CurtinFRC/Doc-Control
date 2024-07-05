@@ -5,7 +5,7 @@ import starlight from '@astrojs/starlight';
 export default defineConfig({
 	integrations: [
 		starlight({
-			title: 'Wombat Docs',
+			title: 'Doc Control',
 			social: {
 				github: 'https://github.com/CurtinFRC',
 				youtube: 'https://youtube.com/@CurtinFRC4788CantControl',
