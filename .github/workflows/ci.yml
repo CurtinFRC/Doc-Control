@@ -13,7 +13,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - uses: pnpm/action-setup@v2.4.0
+    - uses: pnpm/action-setup@v3
       with:
         version: latest
     - name: Install
@@ -27,7 +27,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - uses: pnpm/action-setup@v2.4.0
+    - uses: pnpm/action-setup@v3
       with:
         version: latest        
     - name: Install
@@ -41,7 +41,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - uses: pnpm/action-setup@v2.4.0
+    - uses: pnpm/action-setup@v3
       with:
         version: latest
     - name: Install
