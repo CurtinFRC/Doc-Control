@@ -27,6 +27,8 @@ export default defineConfig({
 						{ label: 'CTRE Documentation', link: 'https://v6.docs.ctr-electronics.com/en/stable/' },
 						{ label: 'REV Documentation', link: 'https://docs.revrobotics.com/brushless/spark-flex/revlib' },
 						{ label: 'Choreo Documentation', link: 'https://sleipnirgroup.github.io/Choreo/' },
+						{ label: 'PhotonVision Documentation', link: 'https://docs.photonvision.org/en/latest/' },
+						{ label: 'Limelight Documentation', link: 'https://docs.limelightvision.io/docs/docs-limelight/getting-started/summary' },
 					],
 				},
 			],

@@ -9,3 +9,5 @@ A collection of resources to help 4788 programmers.
 - [CTRE docs](/other/ctre)
 - [REVLib docs](/other/revlib)
 - [Choreo docs](/other/choreo)
+- [PhotonVision docs](/other/photonvision)
+- [Limelight docs](/other/limelight)
