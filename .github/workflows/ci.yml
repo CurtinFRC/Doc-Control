@@ -1,52 +1,61 @@
-name: Build Checks 
+name: Build Checks
 
 on:
-  push:
-    branches: [ "*" ]
-  pull_request:
-    branches: [ "master" ]
+    push:
+        branches: ['*']
+    pull_request:
+        branches: ['master']
 
 jobs:
-  Ubuntu:
+    Ubuntu:
+        runs-on: ubuntu-latest
 
-    runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v3
+            - uses: pnpm/action-setup@v3
+              with:
+                  version: latest
+            - name: Install
+              run: pnpm install
+            - name: Build
+              run: pnpm build
 
-    steps:
-    - uses: actions/checkout@v3
-    - uses: pnpm/action-setup@v3
-      with:
-        version: latest
-    - name: Install
-      run: pnpm install
-    - name: Build
-      run: pnpm build
+    Windows:
+        runs-on: windows-latest
 
-  Windows:
+        steps:
+            - uses: actions/checkout@v3
+            - uses: pnpm/action-setup@v3
+              with:
+                  version: latest
+            - name: Install
+              run: pnpm install
+            - name: Build
+              run: pnpm build
+    Mac:
+        runs-on: macos-latest
 
-    runs-on: windows-latest
+        steps:
+            - uses: actions/checkout@v3
+            - uses: pnpm/action-setup@v3
+              with:
+                  version: latest
+            - name: Install
+              run: pnpm install
+            - name: Build
+              run: pnpm build
 
-    steps:
-    - uses: actions/checkout@v3
-    - uses: pnpm/action-setup@v3
-      with:
-        version: latest        
-    - name: Install
-      run: pnpm install
-    - name: Build
-      run: pnpm build
+    Format:
+        runs-on: ubuntu-latest
 
-  Mac:
-
-    runs-on: macos-latest
-
-    steps:
-    - uses: actions/checkout@v3
-    - uses: pnpm/action-setup@v3
-      with:
-        version: latest
-    - name: Install
-      run: pnpm install
-    - name: Build
-      run: pnpm build
-
-
+        steps:
+            - uses: actions/checkout@v3
+            - uses: pnpm/action-setup@v3
+              with:
+                  version: latest
+            - name: Install
+              run: pnpm install
+            - name: Run Prettier
+              run: pnpm format
+            - name: Check output
+              run: git --no-pager diff --exit-code HEAD
