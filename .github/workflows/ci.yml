@@ -34,7 +34,6 @@ jobs:
       run: pnpm install
     - name: Build
       run: pnpm build
-   
   Mac:
 
     runs-on: macos-latest
@@ -61,6 +60,6 @@ jobs:
     - name: Install
       run: pnpm install
     - name: Run Prettier
-        run: pnpm format
+      run: pnpm format
     - name: Check output
-        run: git --no-pager diff --exit-code HEAD
+      run: git --no-pager diff --exit-code HEAD
