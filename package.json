@@ -1,22 +1,22 @@
 {
-  "name": "doc-control",
-  "type": "module",
-  "version": "0.0.1",
-  "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro",
-    "format": "pnpm exec prettier . --write"
-  },
-  "dependencies": {
-    "@astrojs/starlight": "^0.14.0",
-    "astro": "^3.6.5",
-    "sharp": "^0.33.5"
-  },
-  "devDependencies": {
-    "prettier": "^3.3.3",
-    "prettier-plugin-astro": "^0.14.1"
-  }
+    "name": "doc-control",
+    "type": "module",
+    "version": "0.0.1",
+    "scripts": {
+        "dev": "astro dev",
+        "start": "astro dev",
+        "build": "astro build",
+        "preview": "astro preview",
+        "astro": "astro",
+        "format": "pnpm exec prettier . --write --ignore-path .gitignore"
+    },
+    "dependencies": {
+        "@astrojs/starlight": "^0.14.0",
+        "astro": "^3.6.5",
+        "sharp": "^0.33.5"
+    },
+    "devDependencies": {
+        "prettier": "^3.3.3",
+        "prettier-plugin-astro": "^0.14.1"
+    }
 }
