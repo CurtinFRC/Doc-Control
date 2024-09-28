@@ -8,7 +8,7 @@ There are many tools that we use on 4788 to write, debug and work with code. Thi
 ## AdvantageScope
 
 [Download](https://github.com/Mechanical-Advantage/AdvantageScope/releases/)
-[Documentation](https://github.com/Mechanical-Advantage/AdvantageScope/tree/main/docs)
+[Documentation](https://docs.advantagescope.org/)
 
 AdvantageScope is an application for interacting with your robots logs. It supports both live and retrospective log viewing and helps with debugging code.
 

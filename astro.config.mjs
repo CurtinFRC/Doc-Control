@@ -39,6 +39,10 @@ export default defineConfig({
                             link: 'https://sleipnirgroup.github.io/Choreo/',
                         },
                         {
+                            label: 'AdvantageScope Documentation',
+                            link: 'https://docs.advantagescope.org/',
+                        },
+                        {
                             label: 'PhotonVision Documentation',
                             link: 'https://docs.photonvision.org/en/latest/',
                         },
