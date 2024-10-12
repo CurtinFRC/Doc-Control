@@ -50,6 +50,10 @@ export default defineConfig({
                             label: 'Limelight Documentation',
                             link: 'https://docs.limelightvision.io/docs/docs-limelight/getting-started/summary',
                         },
+                        {
+                            label: '3512 Software Documentation',
+                            link: 'https://frc3512.github.io/',
+                        },
                     ],
                 },
             ],
