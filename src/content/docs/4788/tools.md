@@ -19,9 +19,16 @@ To get started with AdvantageScope download it from the link above or with the W
 [Download](https://github.com/SleipnirGroup/Choreo/releases)
 [Documentation](https://sleipnirgroup.github.io/Choreo/)
 
-Choreo is an application used for generating swerve paths for autonomous routines. It uses an NLP solver backend to create optimal paths.
+Choreo is an application used for generating time optimal paths. It supports a variety of constraints to customise how your paths work.
 
 To get started with Choreo download it from the link above and open your robot project in it.
+
+## Driversation
+
+[Download](https://www.ni.com/en/support/downloads/drivers/download.frc-game-tools.html#500107)
+[Documentation](https://docs.wpilib.org/en/stable/docs/zero-to-robot/step-4/running-test-program.html)
+
+Driverstation allows you to control your robot. Its created by NI and only supports Windows.
 
 ## WPILib simulation
 
