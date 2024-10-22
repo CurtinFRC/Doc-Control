@@ -9,7 +9,9 @@ A collection of resources to help 4788 programmers.
 
 -   [WPILib docs](/other/wpilib)
 -   [CTRE docs](/other/ctre)
--   [REVLib docs](/other/revlib)
 -   [Choreo docs](/other/choreo)
 -   [PhotonVision docs](/other/photonvision)
+-   [AdvantageScope docs](/other/advantagescope)
+-   [REVLib docs](/other/revlib)
 -   [Limelight docs](/other/limelight)
+-   [Vivid Hosting](/other/vivid)
