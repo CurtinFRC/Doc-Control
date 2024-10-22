@@ -54,6 +54,10 @@ export default defineConfig({
                             label: '3512 Software Documentation',
                             link: 'https://frc3512.github.io/',
                         },
+                        {
+                            label: 'Vivid Hosting Documentation (FRC Radio)',
+                            link: 'https://frc-radio.vivid-hosting.net/',
+                        },
                     ],
                 },
             ],
