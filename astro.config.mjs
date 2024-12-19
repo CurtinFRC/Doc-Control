@@ -39,6 +39,10 @@ export default defineConfig({
                             link: 'https://sleipnirgroup.github.io/Choreo/',
                         },
                         {
+                            label: 'AdvantageKit Documentation',
+                            link: 'https://docs.advantagekit.org/',
+                        },
+                        {
                             label: 'AdvantageScope Documentation',
                             link: 'https://docs.advantagescope.org/',
                         },
