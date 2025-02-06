@@ -35,6 +35,10 @@ export default defineConfig({
                             link: 'https://docs.revrobotics.com/brushless/spark-flex/revlib',
                         },
                         {
+                            label: 'Controls Engineering in FRC',
+                            link: 'https://file.tavsys.net/control/controls-engineering-in-frc.pdf',
+                        },
+                        {
                             label: 'Choreo Documentation',
                             link: 'https://sleipnirgroup.github.io/Choreo/',
                         },
@@ -54,13 +58,10 @@ export default defineConfig({
                             label: 'Limelight Documentation',
                             link: 'https://docs.limelightvision.io/docs/docs-limelight/getting-started/summary',
                         },
+
                         {
                             label: '3512 Software Documentation',
                             link: 'https://frc3512.github.io/',
-                        },
-                        {
-                            label: 'Vivid Hosting Documentation (FRC Radio)',
-                            link: 'https://frc-radio.vivid-hosting.net/',
                         },
                     ],
                 },
