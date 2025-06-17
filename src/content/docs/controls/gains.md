@@ -10,3 +10,9 @@ Some notes on common gain types for FRC mechanisms:
 - KS is the amount of voltage before the amount required to make a mechanism move
 - KS and KG can be found for an elevator or arm using KG = (output up + output down) / 2 and KS = (output up - output down) / 2 where output up and down are the voltage needed to move the mechanism up or down. Note also for arms this will require some use of trig if the arm cannot start flat
 - note all of these ignore mechanism gear ratios
+
+Some more notes on tuning can be found in these articles
+
+- https://docs.wpilib.org/en/stable/docs/software/advanced-controls/introduction/tutorial-intro.html
+- https://docs.wpilib.org/en/stable/docs/software/advanced-controls/introduction/common-control-issues.html#common-control-loop-tuning-issues
+- https://v6.docs.ctr-electronics.com/en/stable/docs/api-reference/device-specific/talonfx/closed-loop-requests.html
