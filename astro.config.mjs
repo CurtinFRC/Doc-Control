@@ -19,6 +19,10 @@ export default defineConfig({
                     autogenerate: { directory: '4788' },
                 },
                 {
+                    label: 'Controls',
+                    autogenerate: { directory: 'controls' },
+                },
+                {
                     label: 'External Docs',
                     items: [
                         // Each item here is one entry in the navigation menu.
